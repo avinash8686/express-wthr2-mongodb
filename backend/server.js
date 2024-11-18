@@ -33,6 +33,9 @@ const weatherRoute = require("./Routes/WeatherRoutes.js");
 // Route Middleware
 app.use(express.json());
 
+app.get("/", function (req, res) {
+  res.send("Welcome to weather api");
+});
 app.use("/api/user/", authRoute);
 app.use("/api/weather/", weatherRoute);
 
